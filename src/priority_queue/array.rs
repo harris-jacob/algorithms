@@ -1,4 +1,4 @@
-use super::traits::{self, PriorityQueue};
+use super::traits::PriorityQueue;
 
 pub struct UnorderedArrayPQ<T> {
     pq: Vec<T>,
@@ -10,12 +10,12 @@ pub struct OrderedArrayPQ<T> {
 
 impl<T: PartialOrd> UnorderedArrayPQ<T> {}
 
-impl<T: PartialOrd> traits::PriorityQueue<T> for UnorderedArrayPQ<T> {
+impl<T: PartialOrd> PriorityQueue<T> for UnorderedArrayPQ<T> {
     fn new() -> Self {
         UnorderedArrayPQ { pq: Vec::new() }
     }
 
-    fn empty(self) -> bool {
+    fn empty(&self) -> bool {
         return self.pq.len() == 0;
     }
 
@@ -37,12 +37,12 @@ impl<T: PartialOrd> traits::PriorityQueue<T> for UnorderedArrayPQ<T> {
     }
 }
 
-impl<T: PartialOrd> traits::PriorityQueue<T> for OrderedArrayPQ<T> {
+impl<T: PartialOrd> PriorityQueue<T> for OrderedArrayPQ<T> {
     fn new() -> Self {
         OrderedArrayPQ { pq: Vec::new() }
     }
 
-    fn empty(self) -> bool {
+    fn empty(&self) -> bool {
         return self.pq.len() == 0;
     }
 
