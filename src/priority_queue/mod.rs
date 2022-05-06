@@ -4,4 +4,4 @@ mod traits;
 
 pub use self::array::OrderedArrayPQ;
 pub use self::array::UnorderedArrayPQ;
-pub use self::binary_heap::MinOrderPQ;
+pub use self::binary_heap::MaxOrderPQ;
